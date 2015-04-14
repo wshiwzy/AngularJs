@@ -1,0 +1,7 @@
+.content {background-color: #06c;color: #fff;width:400px;height: 600px; }
+.content .head{width: 400px;text-align: center;background-color: red;}
+.content .textbox{
+    width: 394px;
+    height: 400px;
+}
+.content div input{text-align: center;}

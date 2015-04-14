@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="myapp">
+    <head>
+        <script src="./angular.min.js"></script>       
+        <link rel="stylesheet" type="text/css" href="./public.css"> 
+        <script type="text/javascript" src="./noteCtrl.js"></script>
+    </head>
+    <body data-ng-controller="noteCtrl">
+        <div class="content" >
+        	<h2 class="head">mynote</h2>
+        	<textarea class="textbox" cols="50" rows="40" data-ng-disabled="!swith" data-ng-model="messages"></textarea>
+        	<div>
+        		<input type="button" value="save" data-ng-click="save()"/>
+        		<input type="button" value="clear" data-ng-click="clear()"/>
+        	</div>
+        	<div>number of characters left:<span data-ng-bind="left()"></span></div>
+        	<input type="checkbox" data-ng-model="swith">
+        </div>
+        <input type="text" data-ng-model="fff" />
+        <text>Sort:</text>
+        <select ng-model="orderProp">
+        	<option value="name" selected="selected">name</option>
+        	<option value="age">age</option>
+        </select>
+        <ul>
+        	<li data-ng-repeat="x in messages.split(',') | filter:orderProp  ">
+        		{{x | uppercase }}
+        	</li>
+        </ul>
+        <textarea>{{names}}</textarea>
+    </body>
+</html>
