@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="myapp">
+    <head>
+        <script src="./angular.min.js"></script>
+        
+    </head>
+    <body>
+        yourname <input type='text' placeholder='test' data-ng-model='name'/>
+        <p data-ng-bind="name | uppercase ">
+
+		<div data-ng-controller="personCtrl">
+			firstname:<input type="text" data-ng-model="firstname"/><br/>
+			lastname:<input type="text" data-ng-model="lastname"/><br/>
+			FullName:{{FullName()}}
+		</div>
+		<script src="./personCtrl.js"></script>
+    </body>
+</html>

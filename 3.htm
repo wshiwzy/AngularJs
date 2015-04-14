@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="myapp">
+    <head>
+        <script src="./angular.min.js"></script>
+        
+    </head>
+    <body>
+        yourname <input type='text' placeholder='test' data-ng-model='name'/>
+        <p data-ng-bind="name">
+
+        <div data-ng-controller="namesCtrl">
+          <ul>
+            <li data-ng-repeat="x in names | orderBy:'country' ">
+              {{ x.name }}
+            </li>
+          </ul>
+        </div>
+        <script src="./nameCtrl.js"></script>
+    </body>
+</html>

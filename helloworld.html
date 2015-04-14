@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myapp">
+    <head>
+        <script src="./angular.min.js"></script>
+        
+    </head>
+    <body>
+        yourname <input type='text' placeholder='test' data-ng-model='name'/>
+        <p data-ng-bind="name">
+
+        <div data-ng-controller="namesCtrl">
+		  <ul>
+		    <li data-ng-repeat="x in names">
+		      {{ x.name }}
+		    </li>
+		  </ul>
+		</div>
+
+		<div data-ng-controller="personCtrl">
+			firstname:<input type="text" data-ng-model="firstname"/><br/>
+			lastname:<input type="text" data-ng-model="lastname"/><br/>
+			FullName:{{FullName()}}
+		</div>
+		<script src="./personCtrl.js"></script>
+		<script src="./nameCtrl.js"></script>
+    </body>
+</html>
